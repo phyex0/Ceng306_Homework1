@@ -10,10 +10,12 @@ public class Car {
 	}
 	
 	boolean isOpen()
-	{
-		for(Door d:doors)
-			if(d.isLocked())
+	{	if(doors==null)
+			return false;
+		for (Door d : doors)
+			if (d==null || d.isLocked())
 				return false;
+
 		return true;
 	}
 	
@@ -23,5 +25,9 @@ public class Car {
 			return controlPanel;
 		return null;
 	}
-	
+
+	public void setControlPanel(ControlPanel controlPanel) {
+		this.controlPanel = controlPanel;
+	}
+
 }

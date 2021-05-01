@@ -8,7 +8,7 @@ public class Key {
 	}
 	
 	boolean isValidLock(Lock lock)
-	{	if(lock!=null)
+	{	if(lock!=null && this.lock != null)
 			return this.lock.codeMatches(lock);
 		return false;
 	}

@@ -15,7 +15,7 @@ public class Door {
 	
 	boolean lock(Key key)
 	{
-		if(lock!= null && key.isValidLock(lock)){
+		if(lock!= null && key!=null && key.isValidLock(lock)){
 			locked=true;
 			return true;
 		}
@@ -25,12 +25,23 @@ public class Door {
 
 	boolean unlock(Key key)
 	{
-		if(lock!= null && key.isValidLock(lock)){
+		if(lock!= null && key!=null && key.isValidLock(lock)){
 			locked=false;
 			return true;
 		}
 
 		return false;
 	}
-	
+
+	public Lock getLock() {
+		return lock;
+	}
+
+	public void setLock(Lock lock) {
+		this.lock = lock;
+	}
+
+	public void setLocked(boolean locked) {
+		this.locked = locked;
+	}
 }
