@@ -15,7 +15,7 @@ public class Door {
 	
 	boolean lock(Key key)
 	{
-		if(key.isValidLock(lock)){
+		if(lock!= null && key.isValidLock(lock)){
 			locked=true;
 			return true;
 		}
@@ -25,7 +25,7 @@ public class Door {
 
 	boolean unlock(Key key)
 	{
-		if(key.isValidLock(lock)){
+		if(lock!= null && key.isValidLock(lock)){
 			locked=false;
 			return true;
 		}

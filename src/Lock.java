@@ -1,8 +1,8 @@
 import java.util.Random;
 
 public class Lock {
-	static int lockCounter = 0;
-	int code;
+	private static int lockCounter = 0;
+	private int code;
 
 	Lock()
 	{	
@@ -13,7 +13,15 @@ public class Lock {
 	
 	boolean codeMatches(Lock lock)
 	{
-		return this.code == lock.code;
+		return this.code == lock.getCode();
 	}
-	
+
+	public int getCode() {
+		return code;
+	}
+
+	public void setCode(int code) {
+		this.code = code;
+	}
+
 }

@@ -1,7 +1,7 @@
 
 public class Car {
 	public Door doors[];
-	public ControlPanel controlPanel;
+	private ControlPanel controlPanel;
 	
 	Car(Door doors[], ControlPanel controlPanel)
 	{
