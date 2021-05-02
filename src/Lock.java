@@ -1,3 +1,4 @@
+//Halit Burak Yeşildal 18050111043
 import java.util.Random;
 
 public class Lock {

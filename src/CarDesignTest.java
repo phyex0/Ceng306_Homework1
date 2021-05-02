@@ -1,16 +1,16 @@
+//Halit Burak Yeşildal 18050111043
 import org.junit.jupiter.api.Test;
 
 public class CarDesignTest {
 	
 	// https://twistedsifter.files.wordpress.com/2016/05/worlds-smallest-car-peel-p50-5.jpg
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		CarDesignTest carDesignTest = new CarDesignTest();
 		carDesignTest.test();
 	}
 
-
-	void test()
-	{
+	@Test
+	void test() throws Exception {
 		CarFactory carFactory = new CarFactory();
 
 		// car is created in a factory and given to you with a key ()

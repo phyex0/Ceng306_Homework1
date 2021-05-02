@@ -1,4 +1,4 @@
-
+//Halit Burak Yeşildal 18050111043
 public class ControlPanel {
 	final double maximumSpeed;
 	private boolean running = false;
@@ -25,7 +25,7 @@ public class ControlPanel {
 		running = false;
 	}
 	
-	boolean isRunning()
+	boolean isRunning()throws Exception
 	{
 		return running;
 	}
@@ -46,8 +46,7 @@ public class ControlPanel {
 	}
 	
 	// Brake pedal: Used to slow down the car
-	double pushBrakePedal(double pressure)
-	{
+	double pushBrakePedal(double pressure) throws Exception {
 		final double currentSpeed = speed;
 		
 		if (isRunning()) { 	
@@ -59,8 +58,7 @@ public class ControlPanel {
 	}
 	
 	// Accelerator: Used to speed up the car
-	double pushAccelerator(double pressure)
-	{
+	double pushAccelerator(double pressure) throws Exception {
 		final double currentSpeed = speed;
 		
 		if (isRunning()) { 	
@@ -72,8 +70,7 @@ public class ControlPanel {
 	}	
 	
 	// Steering wheel: You use the steering wheel to control the direction of the car (steer the car)
-	double useSteeringWheel(double angle)
-	{
+	double useSteeringWheel(double angle) throws Exception {
 		final double currentOrientation = orientation;
 		
 		if (isRunning()) { 

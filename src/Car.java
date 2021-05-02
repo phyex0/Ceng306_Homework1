@@ -1,4 +1,4 @@
-
+//Halit Burak Yeşildal 18050111043
 public class Car {
 	public Door doors[];
 	private ControlPanel controlPanel;
@@ -10,7 +10,7 @@ public class Car {
 	}
 	
 	boolean isOpen()
-	{	if(doors==null)
+	{	if(doors==null || doors.length==0)
 			return false;
 		for (Door d : doors)
 			if (d==null || d.isLocked())
