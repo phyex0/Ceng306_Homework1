@@ -28,6 +28,9 @@ public class CarTest {
         //Line 29 failed. To solve it throw Exception is added to methods of Control panel class. if your control panel is null you cannot use any methods of it.
         Assertions.assertThrows(Exception.class ,()->{new Car(null,cp).getControlPanel().isRunning();});
         assertNotEquals(null,new Car(dArr,cp));
+        Door[] dArr1={d,d1,null};
+        assertNotEquals(true,new Car(dArr1,null));
+        assertEquals(null,new Car(dArr1,null).getControlPanel());
     }
 
     @Test
